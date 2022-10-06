@@ -1,0 +1,51 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.list {
+    width: 70%;
+    min-width: 400px;
+    max-width: 600px;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.list li {
+    /* margin: 8px; */
+    padding: 12px;
+    padding-left: 50px;
+    list-style-image: url('./icons/unchecked_16.png');
+}
+
+.list li span {
+    padding-left: 20px;
+}
+
+.list li span::after {
+    padding: 0 0 0 40px;
+    content: '\2716';
+    color: hsl(0, 67%, 42%);
+}
+
+.list li:nth-child(even) {
+    background-color: hsl(180, 70%, 70%);
+}
+.list li:nth-child(odd) {
+    background-color: hsl(180, 56%, 70%);
+}
+.list li:nth-of-type(3n+2) {
+    background-color: hsl(180, 10%, 80%);
+    list-style-image: url('./icons/checked_16.png');
+}
+.list li span:nth-of-type(3n+2) {
+    text-decoration-line: line-through;
+    text-decoration-thickness: 20px;
+}
