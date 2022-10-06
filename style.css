@@ -1,51 +1,46 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-#header_list {
+#header_list_of_doing {
     text-transform: capitalize;
-    text-align: center;
+    margin: 10px 25px;
 }
 
 .list_to_do {
-    width: 70%;
+    width: 50%;
     min-width: 400px;
     max-width: 600px;
     height: auto;
-    margin: 10px auto;
+    margin: 10px 15px;
     padding: 10px;
     list-style-type: none;
-    list-style-position: inside;
-    list-style-image: url('./icons/unchecked_16.png');
+    word-break: break-all;
 }
 
 .list_to_do li {
-    /* margin: 8px; */
-    padding: 12px;
-    padding-left: 50px;
+    padding: 12px 10px 12px 40px;
 }
 
-.list_to_do li span {
+.list_to_do li::before {
+    padding-right: 20px;
+    content: url('./icons/unchecked_16.png');
+}
+.list_to_do li::after {
     padding-left: 20px;
-}
-
-.list_to_do li span::after {
-    padding: 0 0 0 40px;
     content: '\2716';
     color: hsl(0, 67%, 42%);
 }
-
+.list_to_do li.checked_element::before {
+    padding-right: 20px;
+    content: url('./icons/checked_16.png');
+}
 .list_to_do li:nth-child(even) {
     background-color: hsl(180, 70%, 70%);
 }
 .list_to_do li:nth-child(odd) {
     background-color: hsl(180, 56%, 70%);
 }
-/* .list_to_do li:nth-of-type(3n+2) {
-    background-color: hsl(180, 10%, 80%);
-    list-style-image: url('./icons/checked_16.png');
+.list_to_do li.checked_element {
+    background-color: hsl(180, 34%, 75%);
 }
-.list_to_do li span:nth-of-type(3n+2) {
-    text-decoration-line: line-through;
-    text-decoration-thickness: 20px;
-} */
